@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html {
+    font-size: 62.5%;
+    color: #CED6DF;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+h2 {
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+    text-align: center;
+    font-size: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: #e41165;
+}
+
+.heading {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.sub_head {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h1 {
+    padding-bottom: 0rem;
+    text-align: flex-start;
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+
+.header {
+    width: 100%;
+    height: 8rem;
+    color: black;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #1e2222;
+    font-family: 'QuickSand';
+    align-items: center;
+    width: 100%;
+    display: flex;
+    height: 8rem;
+}
+
+.navbar li {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 17px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.navbar li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.navbar li a:hover {
+    color: #e41165;
+}
+
+.navbar li span {
+    color: grey;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.navbar li span:hover {
+    text-decoration: underline;
+}
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.navbar li span.tata {
+    float: right;
+    color: white;
+}
+.sticky-div {
+    background-color: #0d0d0d;
+    position: relative;
+    width: 100%;
+    z-index: 99;
+}
+
+#form {
+    border-radius: 5x;
+    color: white;
+}
+
+form input {
+    vertical-align: right;
+    margin: 5px 5px 5px 0;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+form textarea {
+    vertical-align: right;
+    margin: 1px 1px 1px 0;
+    padding: 0px;
+    width: 174px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+form select {
+    vertical-align: right;
+    padding: 5px;
+    width: 171px;
+    font-size: 1.3rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.patient_details {
+    padding-top: 5rem;
+    display: grid;
+    justify-content: center;
+    grid-auto-rows: minmax(10rem, auto);
+    grid-gap: 3rem;
+}
+
+.patient_details label {
+    width: 200px;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.patient_card {
+    background-color: #1e2222;
+    width: 80rem;
+    height: 50rem;
+    border-radius: 0.5rem;
+}
+
+.patient_text {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
+.patient_text_patient {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.3rem;
+    font-weight: 500;
+}
+
+.indications {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2);
+    grid-auto-rows: minmax(10rem, auto);
+    grid-gap: 0.5rem;
+}
+
+.primary {
+    display: grid;
+    height: 45rem;
+    width: 39.5rem;
+    align-items: center;
+    padding: 2rem;
+    font-size: 2rem;
+    grid-column: 1/2;
+}
+
+.revision {
+    display: grid;
+    height: 45rem;
+    width: 39.5rem;
+    align-items: center;
+    padding: 2rem;
+    font-size: 2rem;
+    grid-column: 2/2;
+}
+
+.optimal_method {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 0 auto;
+    grid-auto-rows: minmax(10rem, auto);
+    font-size: 2rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: #e41165;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.footer_text {
+    margin-top: 4rem;
+    line-height: 10rem;
+    text-align: center;
+    grid-template-rows: repeat(3, 5rem);
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.footer_content {
+    margin-top: 7rem;
+}
+
+/* arrow */
+
+.center-con {
+    display: flex;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.round {
+    position: relative;
+    border: 3px solid #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.round span {
+    z-index: 999;
+    height: 3px;
+    margin: 1px;
+    width: 27px;
+    background: #fff;
+    transition: 0.4s ease;
+}
+
+.round span:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 25%;
+    bottom: 35%;
+}
+
+.round span:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(135deg);
+    left: 45%;
+    bottom: 35%;
+}
+
+.round span:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 54%;
+}
+
+.round span:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 45%;
+    bottom: 54%;
+}
+
+.round:hover span:nth-child(1) {
+    transform: rotate(-225deg);
+}
+
+.round:hover span:nth-child(2) {
+    transform: rotate(315deg);
+}
+
+.round:hover span:nth-child(3) {
+    transform: rotate(225deg);
+}
+
+.round:hover span:nth-child(4) {
+    transform: rotate(225deg);
+}
+
+/* rest page */
+
+.rest {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2);
+    grid-auto-rows: minmax(10rem, auto);
+    grid-gap: 3rem;
+    padding-top: 4rem;
+}
+
+.rest a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.rest a.rest_head {
+    text-decoration: none;
+    color: #e41165;
+    padding: -1rem;
+}
+
+.rest_card {
+    padding: 5rem;
+    background-color: #1e2222;
+    width: 88rem;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.rest_head {
+    text-align: initial;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.rest label {
+    text-align: initial;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 2rem;
+    width: 200px;
+    display: inline-block;
+}
+
+.rest input {
+    vertical-align: right;
+    margin: 5px 5px 5px 0;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.button {
+    position: relative;
+    background-color: #1e2222;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 88rem;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: #e41165;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
